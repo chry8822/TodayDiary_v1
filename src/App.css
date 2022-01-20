@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap");
+
+@keyframes colorChange {
+  50% {
+    color: royalblue;
+    transform: scale(1.1);
+  }
+  100% {
+    color: tomato;
+  }
+}
+
+@keyframes focus-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(300px);
+    transform: translateZ(300px);
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(12px);
+    transform: translateZ(12px);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.App {
+  font-family: "Noto Sans KR", sans-serif;
+}
+.DiaryEditor {
+  /* border-bottom: 1px solid gray; */
+  text-align: center;
+  padding: 20px 0 40px 0;
+}
+.DiaryEditor .diaryTitle {
+  color: rgb(80, 80, 80);
+  font-size: 40px;
+  margin-bottom: 50px;
+  transition: all 1s;
+  animation: focus-in-contract-bck 1s linear;
+}
+.DiaryEditor input,
+textarea {
+  margin-bottom: 20px;
+  width: 500px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.DiaryEditor input:focus,
+.DiaryEditor textarea:focus {
+  outline-color: rgb(92, 120, 204);
+}
+.DiaryEditor textarea {
+  height: 150px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.DiaryEditor .selectWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.DiaryEditor select {
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  width: 60px;
+  height: 50px;
+  background-color: royalblue;
+  border: 1px solid royalblue;
+  border-radius: 10px;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.DiaryEditor select option {
+  padding: 20px;
+}
+.DiaryEditor select:hover {
+  transform: scale(1.2);
+}
+
+.DiaryEditor button {
+  color: #fff;
+  width: 300px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: royalblue;
+  border: 1px solid royalblue;
+  border-radius: 10px;
+}
+
+.selectText {
+  color: gray;
+  font-size: 20px;
+  margin-right: 40px;
+  animation: colorChange 3s alternate-reverse infinite linear;
+}
+.DiaryEditor .border {
+  margin: 0 auto;
+  width: 700px;
+  margin-top: 60px;
+  border-bottom: 2px solid gray;
+}
+
+/* List */
+
+.statusWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.listBorder {
+  margin: 0 auto;
+  width: 700px;
+  margin-top: 40px;
+  border-bottom: 2px solid gray;
+}
+
+.DiaryList {
+  margin: 0 auto;
+  width: 600px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.DiaryList h2 {
+  text-align: center;
+}
+
+/* item */
+
+.DiaryItem {
+  background-color: rgb(240, 240, 240);
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.DiaryItem .info {
+  border-bottom: 1px solid rgb(180, 180, 180);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.DiaryItem .date {
+  color: gray;
+  font-size: 12px;
+}
+
+.DiaryItem .content {
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.DiaryItem .delete,
+.DiaryItem .modify {
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: gray;
+  color: #fff;
+  float: right;
+  margin-left: 10px;
+}
